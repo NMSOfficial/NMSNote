@@ -53,7 +53,7 @@ class NMSNote:
 
         ayarlar_menusu = tk.Menu(menu_cubugu)
         menu_cubugu.add_cascade(label="Ayarlar", menu=ayarlar_menusu)
-        ayarlar_menusu.add_command(label="Font ve Punto Seç", command=self.font_ve_punto_sec)
+        ayarlar_menusu.add_command(label="Font Seç", command=self.font_sec)
 
         self.yazi_alani.focus_set()
 
@@ -85,7 +85,7 @@ class NMSNote:
         self.gecerli_tema = tema_adi
         self.yazi_alani.config(bg=self.temalar[tema_adi]["bg"], fg=self.temalar[tema_adi]["fg"])
 
-    def font_ve_punto_sec(self):
+    def font_sec(self):
         fontlar = list(tkFont.families())
         fontlar.sort()  # Fontları alfabetik olarak sıralar
 
