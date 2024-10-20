@@ -68,8 +68,7 @@ class NMSNote:
                 self.yazi_alani.insert(tk.END, dosya.read())
 
     def dosya_kaydet(self):
-        dosya_bicimi = messagebox.askquestion("Biçim", "Notunuzu düz metin (.txt) olarak mı yoksa zengin metin (.rtf) olarak mı kaydetmek istersiniz?")
-        uzanti = ".rtf" if dosya_bicimi == "yes" else ".txt"
+        uzanti = ".txt"  # Dosyayı doğrudan .txt olarak kaydedecek
         dosya_yolu = filedialog.asksaveasfilename(defaultextension=uzanti, filetypes=[("Tüm Dosyalar", "*.*"), ("Metin Dosyaları", "*.txt")])
         if dosya_yolu:
             try:
